@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/showFragment">
+
+    <fragment
+        android:id="@+id/showFragment"
+        android:name="com.example.assignmentday5.ShowFragment"
+        android:label="Show Fragment"
+        tools:layout="@layout/fragment_show" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.assignmentday5.ChatFragment"
+        android:label="Chat Fragment"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.assignmentday5.MessageFragment"
+        android:label="Message Fragment"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.assignmentday5.ProfileFragment"
+        android:label="Profile Fragment"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

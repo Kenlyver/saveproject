@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.jetpackday1.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.jetpackday1.fragment.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.jetpackday1.fragment.LoginFragment"
+        android:label="LoginFragment">
+        <argument
+            android:name="username"
+            app:argType="string"
+            android:defaultValue="@null"/>
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="sangbx.com/login/{username}" />
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.jetpackday1.fragment.WelcomeFragment"
+        android:label="WelcomeFragment">
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.jetpackday1.fragment.SettingFragment"
+        android:label="SettingFragment" />
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.example.jetpackday1.fragment.TermsFragment"
+        android:label="TermsFragment" />
+    <action android:id="@+id/action_global_termsFragment" app:destination="@id/termsFragment" />
+</navigation>

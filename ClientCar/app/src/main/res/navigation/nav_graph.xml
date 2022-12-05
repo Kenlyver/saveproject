@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tireFragment">
+
+    <fragment
+        android:id="@+id/tireFragment"
+        android:name="com.example.clientcar.view.fragment.TireFragment"
+        android:label="fragment_tire"
+        tools:layout="@layout/fragment_tire" />
+</navigation>

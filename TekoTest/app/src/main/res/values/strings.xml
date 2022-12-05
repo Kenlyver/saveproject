@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TekoTest</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Update">Update</string>
+    <string name="name_null">Product name cannot be empty</string>
+    <string name="sku_null">Sku cannot be empty</string>
+    <string name="sku_length">Sku cannot exceed 20 characters</string>
+    <string name="name_length">Product name cannot exceed 50 characters</string>
+    <string name="valid_success">Validate Success</string>
+    <string name="str_ok">OK</string>
+    <string name="str_submit_change">Submit Changes</string>
+
+</resources>

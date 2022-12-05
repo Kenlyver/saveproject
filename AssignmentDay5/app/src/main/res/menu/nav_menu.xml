@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/messageFragment"
+            android:icon="@drawable/messenger"
+            android:title="Messege" />
+        <item
+            android:id="@+id/chatFragment"
+            android:icon="@drawable/chat"
+            android:title="Chat" />
+        <item
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/account"
+            android:title="Account" />
+    </group>
+</menu>

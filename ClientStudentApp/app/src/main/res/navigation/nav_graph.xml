@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentFragment">
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.clientstudentapp.view.fragment.StudentFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_student">
+        <action
+            android:id="@+id/action_studentFragment_to_insertFragment"
+            app:destination="@id/insertFragment" />
+        <action
+            android:id="@+id/action_studentFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertFragment"
+        android:name="com.example.clientstudentapp.view.fragment.InsertFragment"
+        android:label="Insert"
+        tools:layout="@layout/fragment_insert">
+        <action
+            android:id="@+id/action_insertFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.clientstudentapp.view.fragment.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update">
+        <action
+            android:id="@+id/action_updateFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+        <argument
+            android:name="student"
+            app:argType="com.example.serverstudentapp.model.Student" />
+    </fragment>
+</navigation>

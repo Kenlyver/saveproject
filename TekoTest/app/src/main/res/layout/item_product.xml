@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.example.tekotest.data.models.Product" />
+
+        <variable
+            name="itemClick"
+            type="com.example.tekotest.utils.callback.ItemClick" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardElevation="@dimen/dp_5"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="#898A8D"
+        app:strokeWidth="@dimen/dp_1"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadImage="@{product.image}"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@{product.name}"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintStart_toEndOf="@id/imgProduct"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@{product.errorDescription}"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintStart_toEndOf="@id/imgProduct"
+                app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+            <TextView
+                android:id="@+id/tvProductSKU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@{String.valueOf(product.sku)}"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintStart_toEndOf="@id/imgProduct"
+                app:layout_constraintTop_toBottomOf="@id/tvProductError" />
+
+            <TextView
+                android:id="@+id/tvProductColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@{product.color}"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintStart_toEndOf="@id/imgProduct"
+                app:layout_constraintTop_toBottomOf="@id/tvProductSKU" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:background="@drawable/ic_baseline_edit_24"
+                android:onClickListener="@{() -> itemClick.onItemClick(product)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

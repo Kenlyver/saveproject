@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ServerStudent</string>
+    <string name="action_student_service">com.example.serverstudent.service.connect</string>
+    <string name="component_student_service">com.example.serverstudent/.service.ServerService</string>
+</resources>

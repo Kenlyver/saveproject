@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/teaFragment">
+
+    <fragment
+        android:id="@+id/teaFragment"
+        android:name="com.example.teamanagement.fragment.TeaFragment"
+        android:label="Tea"
+        tools:layout="@layout/fragment_tea" >
+        <action
+            android:id="@+id/action_teaFragment_to_addTeaFragment"
+            app:destination="@id/addTeaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTeaFragment"
+        android:name="com.example.teamanagement.fragment.AddTeaFragment"
+        android:label="Add Tea"
+        tools:layout="@layout/fragment_add_tea" >
+        <action
+            android:id="@+id/action_addTeaFragment_to_teaFragment"
+            app:destination="@id/teaFragment" />
+        <argument
+            android:name="tea"
+            app:argType="com.example.teamanagement.model.Tea"
+            app:nullable="true" />
+    </fragment>
+</navigation>

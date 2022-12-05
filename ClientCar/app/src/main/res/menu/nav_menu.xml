@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tireFragment"
+        android:checked="true"
+        android:icon="@drawable/monitoring"
+        android:title="Giám sát" />
+
+    <item
+        android:id="@+id/tireFragmentt"
+        android:icon="@drawable/ic_ico_tire"
+        android:title="Khớp Lốp" />
+
+    <item
+        android:id="@+id/tireRotation"
+        android:icon="@drawable/ic_ico_rotation"
+        android:title="Đảo Lốp" />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_settings"
+        android:title="Cài đặt" />
+    <item
+        android:id="@+id/sound"
+        android:icon="@drawable/sound"
+        android:title="Âm Thanh" />
+</menu>

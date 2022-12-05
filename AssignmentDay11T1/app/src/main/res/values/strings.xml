@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AssignmentDay11T1</string>
+    <string name="stop_server">Stop Server</string>
+    <string name="stop_client">Stop Client</string>
+    <string name="start_server">Start Server</string>
+    <string name="start_client">Start Client</string>
+    <string name="start_connect">Start Connnect</string>
+    <string name="stop_connect">Stop Connect</string>
+</resources>
